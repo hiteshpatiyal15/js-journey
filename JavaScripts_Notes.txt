@@ -1,0 +1,76 @@
+output-> console.log(object)
+Declaring the variables---------
+var name = Shim
+Datatypes--------------------------------------------------------------
+Primitive -> 
+	Numeric types-> Number & bigint
+	Non-Numeric types-> String, Boolean, Null, Undefined, Symbol
+Non-Primitive -> 
+	object, Arrys, function, Date object, regular experession
+Number --> 
+	let n1 =2 
+String -->
+	let s1 = "Hello Programmer"
+	let s1 = `${s1}, $("Abhay")`
+Boolean -->
+	let p = true
+	let q = false
+Undefined -->
+	let a
+Null -->
+	let age = null
+Object -->
+	let tpointTech = {
+	type: "Company",
+	location: "Noida"}
+	console.log(tpointTech.type)
+	console.log(tpointTech.location)
+Arrays -->
+	let a = [1,2,3,4]
+	let b = [1, "two", {name: "Object"}, [3,4,5]]
+Function -->
+	function greet(name)
+	{ return "Hello," + name + "!"}
+	console.log(greet("Hitesh")
+Date Object -->
+	let currentDate = new Date();
+	console.log(currentDate)
+Regular Expression -->
+	let pattern = /hello/
+	let result = pattern.test("Hello, TpointTech")
+	console.log(result) // output--> false
+
+Loops and conditions--------------------------------------------------------------------
+if-else, Switch, for loop, while loop, do-while loop, for..of loop, foo..in loop, return statement
+
+if-else -->
+	if(true)
+		{ console.log("Expected condition meets")}
+	else
+		{console.log("Expected condition not meets")}
+
+for loop -->
+	for(int k=0; k<=5; k++){console.log(k)}
+while loop -->
+	int start = 0
+	while(start<10)
+		{console.log(start)
+		 start++;}
+Array---------------------------------------------------------------------------------------------
+var arr = [32,21,18,92,0]
+var arr1 = ["name", 23.2, null, undefined]
+retrieve/accessing array -> arr[index]
+modify array -> arr[index] = value
+copyWithin -> arr.copyWithin(copyToIndex, startIndex)
+insert element from at end the of the array -> arr.push("hello")
+insert element from beginning of the array - arr.unshift("marvel")
+remove element from end of the array -> arr.pop()
+index of array element -> arr.indexOf(18)
+contains charc in array -> arr.includes(92) // return true
+length -> arr.length
+access the subarray -> arr.slice(2,4); // [18,92]
+access the remaining of subarray -> arr.splice(1,3); // [32,92,0]
+
+
+
+
