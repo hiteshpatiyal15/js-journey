@@ -56,6 +56,7 @@ let s1 = "Hello programmer"
     let s3 = `${s1}, ${s2}`
     console.log(s3)
     console.log(s2)
+    
 let name = 'Hitesh'
 let age = 29
 let height = 5.9
