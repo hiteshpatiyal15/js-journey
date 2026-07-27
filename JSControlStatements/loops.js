@@ -1,22 +1,20 @@
-/********* Conditions n Loops *********/
-if(true){
-    console.log("Expected condition is true")
-}else{
-    console.log("Expected condition is false")
+// For loop
+for (let i = 0; i < 10; i++){
+    console.log("Hitesh")
 }
 
-// Loops
-for(let i=0; i<5; i++){
-    console.log(i)
+//While loop
+let n = 1;
+while (n < 10) {
+    console.log("JavaScript")
+    n++
 }
-console.log("****************************")
-// While loop
-var start = 0
-while(true){
-    if(start<5){
-        console.log(start)
-        start++
-    }else{
-        break
-    }
+
+let m = 1;
+do {
+    console.log(`While loop executed ${m} times`)
+    m++
+}
+while (m <= 5) {
+    
 }

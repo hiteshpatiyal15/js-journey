@@ -1,0 +1,5 @@
+let userIdOne = Symbol("userId")
+let userIdTwo = Symbol("userId")
+console.log(userIdOne)
+console.log(userIdTwo)
+console.log(userIdOne === userIdTwo)
