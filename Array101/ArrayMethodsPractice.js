@@ -1,31 +1,39 @@
-let names = [`Karan`, `Ben`, `Virat`]
-console.log(names.length)
-console.log(names["0"])
-console.log(names["3"])
+let array = [1, 2, 3, 4, 5]
+console.log(array)
 
-//push
-names.push(`Aditya`)
-let len = names.length
-console.log(len)
-console.log(names)
 
-names[7] = `Chirag`
-console.log(names)
-
-let data = []
-console.log(data.length)
-data[1000] = `Jayesh`
-console.log(data)
-
-//pop functions
-let subjects = [`Maths`, `English`, `Physics`, `Chemistry`, `Jave Programming`]
-console.log(subjects)
-subjects.pop()
-console.log(subjects)
-
-let subject 
-for (let i = 0; i < 5; i++) {
-    subject = subjects.pop()
-    console.log(subjects)
+// Array literal
+let country = [`India`, `Australia`, `England`]
+for (let i = 0; i < country.length; i++) {
+    console.log(country[i]);
+    
 }
-console.log(subjects.pop())
+
+// new keyword
+let subject = new Array()
+subject[0] = "Java"
+subject[1] = "Maths"
+subject[2] = "Physics"
+console.log(subject);
+
+// Array constructor
+let employee = new Array("Sameer", "lucky", "Raj")
+console.log(employee);
+
+// Accessing elements
+let cars = ["BMW", "Bugatti", "Skyline"];    
+console.log(cars[1]);
+
+// modifying the element
+cars[0] = "Ferrari"
+console.log(cars);
+
+// looping through array
+cars.forEach(function (car) {
+    console.log(car)
+})
+
+cars.forEach(car => {
+    console.log(car)
+})
+
