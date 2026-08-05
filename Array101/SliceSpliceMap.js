@@ -15,7 +15,7 @@ console.log(numbers);
 numbers.splice(1, 1, 55, 66, 88)
 console.log(numbers);
 
-//splice - replaceg
+//splice - replace
 numbers.splice(1,2,25)
 console.log(numbers);
 
