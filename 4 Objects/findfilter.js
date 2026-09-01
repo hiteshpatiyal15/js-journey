@@ -27,6 +27,3 @@ let findId = userData.find(user => {
     return user.id===101
 })
 console.log(findId);
-
-
-
