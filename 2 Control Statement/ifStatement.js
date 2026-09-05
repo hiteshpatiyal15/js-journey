@@ -1,16 +1,25 @@
-if (10 > 50)
-    console.log(false)
-if (50 > 10)
-    console.log(true)
-if (1)
-    console.log("truthy value")
-
-let age = -9;
-if (age > 18) {
-    console.log("Person is adult")
-} else if(age>0 && age<18){
-    console.log("Person is a clid")
+// if statement
+var a = 20;
+if (a > 10) {
+    console.log("value of a is greater then 10");
 }
-else {
-    console.log("Invalid age")
+
+// if else statement
+var b = 20;
+if (b % 2 == 0) {
+    console.log("b is even number");
+} else {
+    console.log("b is odd number");
+}
+
+//if-else if statement
+var c = 40;
+if (c == 20) {
+    console.log("c is equals to 20");
+} else if (c == 30) {
+    console.log("c is equals to 30");
+} else if (c == 10) {
+    console.log("c is equals to 10");
+} else {
+    console.log("c is not equals to 10, 20 or 30");
 }

@@ -1,4 +1,4 @@
-let day = 'Fridayy'
+let day = 'Friday'
 switch (day) {
     case 'Monday': console.log("today is Monday")
         break

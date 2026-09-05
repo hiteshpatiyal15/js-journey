@@ -21,3 +21,4 @@ console.log("Initial app name: ", appName);
 var appName = "OtherApp";
 console.log("New app name: ", appName);
 
+    
