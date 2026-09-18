@@ -33,18 +33,10 @@ const supportedBrowsers = [
     "Firefox",
     "Edge"
 ];
-<<<<<<< HEAD
-const availaleBrowsers = ["Chrome", "Safari", "Firefox"];
-for (let browser of availaleBrowsers) {
-    if (!supportedBrowsers.includes(browser)) {
-        console.log(`${browser} -> Not supported`);
-    }
-}
-=======
 
 const browsers = ["Chrome", "Safari", "Firefox"];
 console.log(`Checking browser supported ${browsers}`);
-for(let browser of browsers){
+for (let browser of browsers) {
     if (supportedBrowsers.includes(browser)) {
         console.log(`${browser} -> Supported`);
     } else {
@@ -86,4 +78,32 @@ const tests = [
     { name: "Logout", status: "PASS" }
 ];
 
->>>>>>> 71b9edc368bd204ca3af51a32d03689a6d4c7b2d
+// Maps
+const testNames = tests.map(test => test.name);
+console.log(`Test Names: ${testNames}`);
+
+const testStatuses = tests.map(test => test.status);
+console.log(`Test Statuses: ${testStatuses}`);
+
+const toUpperCase = tests.map((test) => {
+    console.log(test.name.toUpperCase());
+});
+
+
+// toString()
+console.log(testCases.toString());
+
+//at()
+console.log(testCases.at(2));
+
+// forEach()
+const testResults = ["PASS", "SKIP", "FAIL", "NO RUN", "PASS", "FAIL"];
+let pass = 0;
+let fail = 0;
+let skip = 0;
+testResults.forEach((result) => {
+    result==="PASS" ? pass++ : result==="FAIL" ? fail++ : skip++;
+    console.log(`Pass: ${pass}, Fail: ${fail}, Skip: ${skip}`);
+});
+
+// join()
