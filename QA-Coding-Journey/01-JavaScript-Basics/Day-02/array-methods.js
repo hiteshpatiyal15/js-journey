@@ -6,28 +6,58 @@ console.log(`Adding elements to empty array: ${testCases}`);
 console.log(`Total Test Cases: ${testCases.length}`);
 
 //pop 
+console.log(`"${"*".repeat(10)}"`);
 console.log(`Original element: ${testCases}`);
 testCases.pop();
 console.log(`Remove last element: ${testCases}`);
 
+// reverse 
+console.log(`"${"*".repeat(10)}"`);
+console.log(`Original element: ${testCases}`);
+testCases.reverse();
+console.log(`Reverse the array: ${testCases}`);
+
+//shift 
+console.log(`"${"*".repeat(10)}"`);
+testCases.shift();
+console.log(`Deleted element from start: ${testCases}`);
+
+// unshift
+console.log(`"${"*".repeat(10)}"`);
+testCases.unshift("Forgot Password");
+console.log(`Add new element to start: ${testCases}`);
+
+// join
+console.log(`"${"*".repeat(10)}"`);
+let joinedTestCases = testCases.join(", ");
+console.log(`Join the array elements: ${joinedTestCases}`);
+
+//sort
+console.log(`"${"*".repeat(10)}"`);
+console.log(`Original array: ${testCases}`);
+testCases.sort();
+console.log(`Sort the array elements by lexical order: ${testCases}`);
+
+// Sort by alphabetically
+console.log(`"${"*".repeat(10)}"`);
+let testCaseNames2 = ["Login", "Logout", "Search", "Checkout", "Payment"];
+console.log(`Original array: ${testCaseNames2}`);
+testCaseNames2.sort((a, b) => a.localeCompare(b));
+console.log(`Sorted array alphabetically: ${testCaseNames2}`);
+
 // toString
+console.log(`"${"*".repeat(10)}"`);
 let arrayToString = testCases.toString();
 console.log(`Convert array to string: ${arrayToString}`);
 
 //concate
+console.log(`"${"*".repeat(10)}"`);
 let newTestCases = ["Add to Cart", "My Orders", "MyAccount"];
 let regressTestCases = testCases.concat(newTestCases)
 console.log(`Concate another array: ${regressTestCases}`);
 
-// unshift
-testCases.unshift("Forgot Password");
-console.log(`Add new element to start: ${testCases}`);
-
-//shift 
-testCases.shift();
-console.log(`Deleted element from start: ${testCases}`);
-
 // includes
+console.log(`"${"*".repeat(10)}"`);
 const supportedBrowsers = [
     "Chrome",
     "Firefox",
@@ -45,31 +75,58 @@ for (let browser of browsers) {
 }
 
 // slice
+console.log(`"${"*".repeat(10)}"`);
 let testCaseId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let copyArray = testCaseId.slice(0, 7);
 console.log(copyArray);
 
 //splice
+console.log(`"${"*".repeat(10)}"`);
 console.log(`Original array: ${testCaseId}`);
 
 //Add element
+console.log(`"${"*".repeat(10)}"`);
 testCaseId.splice(1, 0, 101);
 console.log(`Added new element at index 1: ${testCaseId}`);
 
 //Remove element
+console.log(`"${"*".repeat(10)}"`);
 testCaseId.splice(1, 1);
 console.log(`Delete element from index 1: ${testCaseId}`);
 
 //Add series of element
+console.log(`"${"*".repeat(10)}"`);
 testCaseId.splice(2, 0, 101, 102)
 console.log(`Added new series of element: ${testCaseId}`);
 
 // Replace element
+console.log(`"${"*".repeat(10)}"`);
 testCaseId.splice(2, 2, 103, 104);
 console.log(`Replace element from index 2 to 3: ${testCaseId}`);
 
+// Map
+console.log(`"${"*".repeat(10)}"`);
+let doubledValues = testCaseId.map(x => x * 2);
+console.log(`Doubled values: ${doubledValues}`);
 
-// Fliters
+let mappedValues = testCaseId.map((value, index) => {
+    console.log(`Index: ${index}, Value: ${value}`);
+});
+console.log(`Mapped values: ${mappedValues}`);
+
+// Find it is used to find the first element in the array that satisfies the provided testing function. 
+// It returns the value of the first element that passes the test, or undefined if no elements pass the test.
+console.log(`"${"*".repeat(10)}"`);
+const foundValue = testCaseId.find(x => x > 5);
+console.log(`Found value: ${foundValue}`);
+
+
+// Filters is used to create a new array with all elements that pass the test implemented by the provided function.
+console.log(`"${"*".repeat(10)}"`);
+const filteredValues = testCaseId.filter(x => x > 5);
+console.log(`Filtered values: ${filteredValues}`);
+
+console.log(`"${"*".repeat(10)}"`);
 const tests = [
     { name: "Login", status: "PASS" },
     { name: "Search", status: "FAIL" },
@@ -78,32 +135,8 @@ const tests = [
     { name: "Logout", status: "PASS" }
 ];
 
-// Maps
-const testNames = tests.map(test => test.name);
-console.log(`Test Names: ${testNames}`);
-
-const testStatuses = tests.map(test => test.status);
-console.log(`Test Statuses: ${testStatuses}`);
-
-const toUpperCase = tests.map((test) => {
-    console.log(test.name.toUpperCase());
-});
+//Find index is used to find the index of the first element in the array that satisfies the provided testing function.
+const index = tests.findIndex(test => test.status === "FAIL");
+console.log(`Index of first failed test: ${index}`);
 
 
-// toString()
-console.log(testCases.toString());
-
-//at()
-console.log(testCases.at(2));
-
-// forEach()
-const testResults = ["PASS", "SKIP", "FAIL", "NO RUN", "PASS", "FAIL"];
-let pass = 0;
-let fail = 0;
-let skip = 0;
-testResults.forEach((result) => {
-    result==="PASS" ? pass++ : result==="FAIL" ? fail++ : skip++;
-    console.log(`Pass: ${pass}, Fail: ${fail}, Skip: ${skip}`);
-});
-
-// join()

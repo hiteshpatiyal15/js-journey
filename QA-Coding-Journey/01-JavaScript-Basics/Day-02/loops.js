@@ -7,6 +7,7 @@ const testCases = [
     "Add to Card Test",
     "Checkout Test"
 ];
+// For of loop
 // executing test cases 
 for (let testCase of testCases) {
     console.log(`Executing: ${testCase}`);
@@ -58,3 +59,78 @@ const browsers = ["Chrome", "Firefox", "Edge", "Safari"];
 for (let browser of browsers) {
     console.log(`Running tests on ${browser}`);
 }
+
+// For in loop
+const testCaseDetails = {
+    name: "Login Test",
+    status: "PASS",
+    executionTime: "5s"
+};
+
+for (let key in testCaseDetails) {
+    console.log(`${key}: ${testCaseDetails[key]}`);
+}
+
+const testCaseResults = {
+    test1: "PASS",
+    test2: "FAIL",
+    test3: "PASS",
+    test4: "FAIL"
+};
+
+for (let test in testCaseResults) {
+    if (testCaseResults[test] === "FAIL") {
+        console.log(`Failed Test: ${test}`);
+    }
+}
+
+for (let test in testCaseResults) {
+    if (testCaseResults[test] === "PASS") {
+        console.log(`Passed Test: ${test}`);
+    }
+}
+let passedTests = 0;
+let failedTests = 0;
+for (let test in testCaseResults) {
+    if (testCaseResults[test] === "PASS") {
+        passedTests++;
+    } else {
+        failedTests++;
+    }
+}
+console.log(`Passed Tests: ${passedTests}`);
+console.log(`Failed Tests: ${failedTests}`);
+
+// Name of passed and failed tests with their count
+let passedTestNames = [];
+let failedTestNames = [];
+for (let test in testCaseResults) {
+    if (testCaseResults[test] === "PASS") {
+        passedTestNames.push(test);
+    } else {
+        failedTestNames.push(test);
+    }
+}
+console.log(`Passed Tests: ${passedTestNames.join(", ")}`);
+console.log(`Failed Tests: ${failedTestNames.join(", ")}`);
+console.log(`Total Passed Tests: ${passedTestNames.length}`);
+console.log(`Total Failed Tests: ${failedTestNames.length}`);
+
+// forEach loop
+const testCaseList = [
+    "Login Test",
+    "Logout Test",
+    "Search Test",
+    "Add to Card Test",
+    "Checkout Test"
+];
+
+testCaseList.forEach((testCase, index) => {
+    console.log(`Test ${index + 1}: ${testCase}`);
+});
+
+testCaseList.forEach((testCase) => {
+    if (testCase.includes("Login")) {
+        console.log(`Executing: ${testCase}`);
+    }
+});
