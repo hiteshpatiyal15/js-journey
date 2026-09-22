@@ -139,4 +139,37 @@ const tests = [
 const index = tests.findIndex(test => test.status === "FAIL");
 console.log(`Index of first failed test: ${index}`);
 
+const data = [10, 20, 30, 40, 50];
+console.log(data);
+
+const result = data.map(function (number) {
+    return number * 2;
+})
+console.log(result);
+
+const result1 = data.map(number => number + 10);
+console.log(result1);
+
+data.forEach(function (number, count) {
+    console.log(`Number ${count+1} : ${number}`);
+})
+
+data.forEach(value => console.log(value))
+
+//Filter
+const numbers = [12, 87, 292, 2719, 11];
+const result2 = numbers.filter(number => number >= 100);
+console.log(result2);
+
+// find
+const userdata = [{ "age": 29, "Name": "Hitesh", "profession": "QA Engineer" },
+    { "age": 30, "Name": "Aditya", "profession": "Site Engineer" },
+    { "age": 31, "Name": "Hitesh", "profession": "Merchant navy officer" }
+]
+
+const getUserDetails = userdata.find(value => value.age === 30);
+console.log(getUserDetails);
+
+
+
 
