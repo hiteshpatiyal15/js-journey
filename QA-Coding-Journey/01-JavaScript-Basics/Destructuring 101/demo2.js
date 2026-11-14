@@ -34,4 +34,17 @@ console.log(myCountry);
 console.log(myPincode);
 
 
+const userdata = {
+    username: 'Hitesh',
+    userage: 30,
+    role: 'QA Engineer',
+    location: 'Mumbai',
+}
+console.log();
+
+const { username, userage, role, location, address = "ABC tower,211" } = userdata;
+console.log(username);
+console.log(userage);
+console.log(location);
+console.log(address);
 

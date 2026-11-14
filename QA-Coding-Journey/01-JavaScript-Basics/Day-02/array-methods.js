@@ -169,7 +169,3 @@ const userdata = [{ "age": 29, "Name": "Hitesh", "profession": "QA Engineer" },
 
 const getUserDetails = userdata.find(value => value.age === 30);
 console.log(getUserDetails);
-
-
-
-
